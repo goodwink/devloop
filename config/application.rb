@@ -5,7 +5,7 @@ require File.expand_path('../boot', __FILE__)
 require "action_controller/railtie"
 require "action_mailer/railtie"
 require "active_resource/railtie"
- require "rails/test_unit/railtie"
+require "rails/test_unit/railtie"
 
 # If you have a Gemfile, require the gems listed there, including any gems
 # you've limited to :test, :development, or :production.
@@ -43,5 +43,12 @@ module Devloop
 
     # Enable the asset pipeline
     config.assets.enabled = true
+
+    config.generators do |g|
+      g.test_framework :rspec, :views => false, :fixture => true
+      g.fixture_replacement :factory_girl, :dir => 'spec/factories'
+      g.form_builder :simple_form
+      g.template_engine :haml
+    end
   end
 end

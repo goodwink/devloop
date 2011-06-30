@@ -6,13 +6,19 @@ gem 'rails', '3.1.0.rc4'
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 gem 'mongoid'
+gem 'bson_ext'
 
 # Asset template engines
 gem 'haml', '3.1.2'
-gem 'sass-rails', :git => 'https://github.com/rails/sass-rails.git', :ref => "4771b3f3f0641eed1f90686de9c261ac1f792518"
-gem 'compass', :git => 'https://github.com/chriseppstein/compass.git', :ref => "24ed97d9201253392c779dd62f6090f129959c44"
+gem 'haml-rails', :group => :development
+gem 'sass-rails', :git => 'https://github.com/rails/sass-rails.git'
+gem 'compass', :git => 'https://github.com/chriseppstein/compass.git'
 gem 'coffee-script'
 gem 'uglifier'
+gem 'simple_form'
+gem 'devise', :git => 'http://github.com/plataformatec/devise.git'
+
+gem 'hoptoad_notifier'
 
 gem 'jquery-rails'
 gem 'sprockets', '2.0.0.beta.10'
@@ -28,5 +34,11 @@ gem 'sprockets', '2.0.0.beta.10'
 
 group :test do
   # Pretty printed test output
+
+  gem 'database_cleaner'
+  gem 'rails3-generators' #mainly for factory_girl & simple_form at this point
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+
   gem 'turn', :require => false
 end
