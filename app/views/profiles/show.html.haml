@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @profile.name
+%p
+  %b Description:
+  = @profile.description
+%p
+  %b Homepage:
+  = @profile.homepage
+%p
+  %b Statusnet:
+  = @profile.statusnet
+%p
+  %b Gitorious:
+  = @profile.gitorious
+
+= link_to 'Edit', edit_profile_path(@profile)
+\|
+= link_to 'Back', profiles_path

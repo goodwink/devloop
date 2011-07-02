@@ -1,0 +1,26 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @iteration.name
+%p
+  %b Slug:
+  = @iteration.slug
+%p
+  %b Start date:
+  = @iteration.start_date
+%p
+  %b End date:
+  = @iteration.end_date
+
+= link_to 'Edit', edit_iteration_path(@iteration)
+\|
+= link_to 'Back', iterations_path
+
+.table-container
+  %ul.sortable
+    - @iteration.tasks.sort{|t1, t2| t1.rank <=> t2.rank}.each do |task|
+      %li.ui-state-default{:id=>"#{task.id}"}
+        %span.left-edge= link_to "##{task.number}", task
+        %span.main-content= task.name
+        %span.right-edge= task.estimate

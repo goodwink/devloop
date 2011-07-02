@@ -1,0 +1,15 @@
+= simple_form_for @version do |form|
+
+  -if @version.errors.any?
+    #errorExplanation
+      %h2= "#{pluralize(@version.errors.count, "error")} prohibited this #{Version.name.titleize} from being saved:"
+      %ul
+        - @version.errors.full_messages.each do |msg|
+          %li= msg  
+
+  = form.input :name, :label => 'Name'
+  = form.input :slug, :label => 'Slug'
+  = form.input :release_date, :label => 'Release Date'
+
+  .actions
+    = form.button :submit

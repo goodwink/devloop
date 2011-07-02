@@ -1,0 +1,30 @@
+ul.hmenu {
+  list-style: none;	
+  margin: 0 0 2em;
+  padding: 0;
+}
+
+ul.hmenu li {
+  display: inline;  
+}
+
+.table-container {
+  width: 800px;
+}
+
+.sortable .left-edge {
+  text-align: left;
+  margin-left: 5px;
+  float: left;
+}
+
+.sortable .right-edge {
+  text-align: right;
+  margin-right: 5px;
+  float: right;
+}
+
+.sortable .main-content {
+  margin-left: 10px;
+  margin-right: 10px;
+}

@@ -1,0 +1,31 @@
+%h1 Listing projects
+
+%table
+  %tr
+    %th Name
+    %th Slug
+    %th Description
+    %th Gitorious repo
+    %th Errbit project
+    %th Statusnet topic
+    %th Jenkins project
+    %th
+    %th
+    %th
+
+  - @projects.each do |project|
+    %tr
+      %td= project.name
+      %td= project.slug
+      %td= project.description
+      %td= project.gitorious_repo
+      %td= project.errbit_project
+      %td= project.statusnet_topic
+      %td= project.jenkins_project
+      %td= link_to 'Show', project
+      %td= link_to 'Edit', edit_project_path(project)
+      %td= link_to 'Destroy', project, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Project', new_project_path

@@ -1,0 +1,36 @@
+/* line 1, ../../app/assets/stylesheets/application.css.scss */
+ul.hmenu {
+  list-style: none;
+  margin: 0 0 2em;
+  padding: 0;
+}
+
+/* line 7, ../../app/assets/stylesheets/application.css.scss */
+ul.hmenu li {
+  display: inline;
+}
+
+/* line 11, ../../app/assets/stylesheets/application.css.scss */
+.table-container {
+  width: 800px;
+}
+
+/* line 15, ../../app/assets/stylesheets/application.css.scss */
+.sortable .left-edge {
+  text-align: left;
+  margin-left: 5px;
+  float: left;
+}
+
+/* line 21, ../../app/assets/stylesheets/application.css.scss */
+.sortable .right-edge {
+  text-align: right;
+  margin-right: 5px;
+  float: right;
+}
+
+/* line 27, ../../app/assets/stylesheets/application.css.scss */
+.sortable .main-content {
+  margin-left: 10px;
+  margin-right: 10px;
+}

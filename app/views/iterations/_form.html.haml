@@ -1,0 +1,16 @@
+= simple_form_for @iteration do |form|
+
+  -if @iteration.errors.any?
+    #errorExplanation
+      %h2= "#{pluralize(@iteration.errors.count, "error")} prohibited this #{Iteration.name.titleize} from being saved:"
+      %ul
+        - @iteration.errors.full_messages.each do |msg|
+          %li= msg  
+
+  = form.input :name, :label => 'Name'
+  = form.input :slug, :label => 'Slug'
+  = form.input :start_date, :label => 'Start Date'
+  = form.input :end_date, :label => 'End Date'
+
+  .actions
+    = form.button :submit

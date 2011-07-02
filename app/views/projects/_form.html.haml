@@ -1,0 +1,19 @@
+= simple_form_for @project do |form|
+
+  -if @project.errors.any?
+    #errorExplanation
+      %h2= "#{pluralize(@project.errors.count, "error")} prohibited this #{Project.name.titleize} from being saved:"
+      %ul
+        - @project.errors.full_messages.each do |msg|
+          %li= msg  
+
+  = form.input :name, :label => 'Name'
+  = form.input :slug, :label => 'Slug'
+  = form.input :description, :label => 'Description'
+  = form.input :gitorious_repo, :label => 'Gitorious Repo'
+  = form.input :errbit_project, :label => 'Errbit Project'
+  = form.input :statusnet_topic, :label => 'Statusnet Topic'
+  = form.input :jenkins_project, :label => 'Jenkins Project'
+
+  .actions
+    = form.button :submit

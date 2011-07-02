@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @project.name
+%p
+  %b Slug:
+  = @project.slug
+%p
+  %b Description:
+  = @project.description
+%p
+  %b Gitorious repo:
+  = @project.gitorious_repo
+%p
+  %b Errbit project:
+  = @project.errbit_project
+%p
+  %b Statusnet topic:
+  = @project.statusnet_topic
+%p
+  %b Jenkins project:
+  = @project.jenkins_project
+
+= link_to 'Edit', edit_project_path(@project)
+\|
+= link_to 'Back', projects_path

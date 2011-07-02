@@ -59,12 +59,38 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
 
     respond_to do |format|
-      if @task.update_attributes(params[:task])
-        format.html { redirect_to @task, notice: 'Task was successfully updated.' }
-        format.json { head :ok }
+      # Are we re-ranking tasks?
+      if params[:task][:rank]
+        new_rank = Task.order_by([[:rank, :asc]])[params[:task][:rank].to_i].rank
+        @task.rank = new_rank + (new_rank > @task.rank ? 1 : 0)
+
+        # Adjust other ranks to fit task in new rank, can this be more efficient?
+        Task.where(:rank.gte => @task.rank).each do |ut|
+          ut.rank += 1
+          
+          if !ut.save
+            format.html { render action: "edit" }
+            format.json { render json: @task.errors, status: :unprocessable_entity }
+          end
+        end
+
+        # Save the new rank for the task
+        if !@task.save
+          format.html { render action: "edit" }
+          format.json { render json: @task.errors, status: :unprocessable_entity }
+        else
+          format.html { redirect_to @task, notice: 'Task was successfully updated.' }
+          format.json { head :ok }
+        end
       else
-        format.html { render action: "edit" }
-        format.json { render json: @task.errors, status: :unprocessable_entity }
+        # Normal update, no re-rank
+        if @task.update_attributes(params[:task])
+          format.html { redirect_to @task, notice: 'Task was successfully updated.' }
+          format.json { head :ok }
+        else
+          format.html { render action: "edit" }
+          format.json { render json: @task.errors, status: :unprocessable_entity }
+        end
       end
     end
   end

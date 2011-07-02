@@ -1,0 +1,17 @@
+= simple_form_for @profile do |form|
+
+  -if @profile.errors.any?
+    #errorExplanation
+      %h2= "#{pluralize(@profile.errors.count, "error")} prohibited this #{Profile.name.titleize} from being saved:"
+      %ul
+        - @profile.errors.full_messages.each do |msg|
+          %li= msg  
+
+  = form.input :name, :label => 'Name'
+  = form.input :description, :label => 'Description'
+  = form.input :homepage, :label => 'Homepage'
+  = form.input :statusnet, :label => 'Statusnet'
+  = form.input :gitorious, :label => 'Gitorious'
+
+  .actions
+    = form.button :submit

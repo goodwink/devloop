@@ -13,10 +13,12 @@ gem 'haml', '3.1.2'
 gem 'haml-rails', :group => :development
 gem 'sass-rails', :git => 'https://github.com/rails/sass-rails.git'
 gem 'compass', :git => 'https://github.com/chriseppstein/compass.git'
+gem 'therubyracer'
 gem 'coffee-script'
 gem 'uglifier'
 gem 'simple_form'
 gem 'devise', :git => 'http://github.com/plataformatec/devise.git'
+gem 'twitter'
 
 gem 'hoptoad_notifier'
 
