@@ -1,0 +1,52 @@
+.dashboard-column
+  %h4 Story Queue
+  %ul.sortable#queue-sort
+    - @project.tasks.where(phase: nil).order_by([[:rank, :asc]]).limit(5).each do |task|
+      %li.ui-state-default.card{id: "#{task.id}"}
+        %span.left-edge= link_to "##{task.number}", task
+        %span.main-content= task.name
+
+.dashboard-column
+  %h4 Elaboration
+  .table-container
+    %ul.sortable#elaboration-sort
+      - @project.tasks.where(phase: "elaboration").order_by([[:rank, :asc]]).limit(2).each do |task|
+        %li.ui-state-default.card{id: "#{task.id}"}
+          %span.left-edge= link_to "##{task.number}", task
+          %span.main-content= task.name
+          
+.dashboard-column
+  %h4 Development
+  .table-container
+    %ul.sortable#development-sort
+      - @project.tasks.where(phase: "development").order_by([[:rank, :asc]]).limit(1).each do |task|
+        %li.ui-state-default.card{id: "#{task.id}"}
+          %span.left-edge= link_to "##{task.number}", task
+          %span.main-content= task.name
+
+.dashboard-column
+  %h4 Test
+  .table-container
+    %ul.sortable#test-sort
+      - @project.tasks.where(phase: "test").order_by([[:rank, :asc]]).limit(3).each do |task|
+        %li.ui-state-default.card{id: "#{task.id}"}
+          %span.left-edge= link_to "##{task.number}", task
+          %span.main-content= task.name
+          
+.dashboard-column
+  %h4 Deployment
+  .table-container
+    %ul.sortable#deployment-sort
+      - @project.tasks.where(phase: "deployment").order_by([[:rank, :asc]]).limit(1).each do |task|
+        %li.ui-state-default.card{id: "#{task.id}"}
+          %span.left-edge= link_to "##{task.number}", task
+          %span.main-content= task.name
+
+.dashboard-column.rightmost
+  %h4 Done!
+  .table-container
+    %ul.sortable
+      - @project.tasks.where(phase: "done").order_by([[:rank, :asc]]).each do |task|
+        %li.ui-state-default.card{id: "#{task.id}"}
+          %span.left-edge= link_to "##{task.number}", task
+          %span.main-content= task.name

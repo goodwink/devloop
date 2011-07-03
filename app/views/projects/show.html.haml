@@ -1,27 +1,37 @@
-%p#notice= notice
+.ui-corner-all.ui-widget.ui-widget-content.project-header
+  %table
+    %tr
+      %td Name:
+      %td= @project.name
+      %td Errbit project:
+      %td= @project.errbit_project
+    %tr
+      %td Slug:
+      %td= @project.slug
+      %td Statusnet topic:
+      %td= @project.statusnet_topic
+    %tr
+      %td Description:
+      %td= @project.description
+      %td Jenkins project:
+      %td= @project.jenkins_project
+    %tr
+      %td Gitorious repo:
+      %td= @project.gitorious_repo
+      %td
+      %td
 
-%p
-  %b Name:
-  = @project.name
-%p
-  %b Slug:
-  = @project.slug
-%p
-  %b Description:
-  = @project.description
-%p
-  %b Gitorious repo:
-  = @project.gitorious_repo
-%p
-  %b Errbit project:
-  = @project.errbit_project
-%p
-  %b Statusnet topic:
-  = @project.statusnet_topic
-%p
-  %b Jenkins project:
-  = @project.jenkins_project
-
-= link_to 'Edit', edit_project_path(@project)
-\|
-= link_to 'Back', projects_path
+#tab-container
+  %ul
+    %li
+      %a{href: "#prioritization"}
+        %span= "Prioritize Tasks"
+    %li
+      %a{href: "#dashboard"}
+        %span= "Project Dashboard"
+    %li
+      %a{href: "#rolebased"}
+        %span= "Role Focus"
+  #prioritization= render("prioritization")
+  #dashboard= render("dashboard")
+  #rolebased

@@ -1,15 +1,15 @@
 /* line 1, ../../app/assets/stylesheets/scaffolds.css.scss */
 body {
-  background-color: #fff;
-  color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
+  background-image: url("/assets/dark-back.png");
+  font-family: 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
+  color: #EEE;
   font-size: 13px;
   line-height: 18px;
 }
 
 /* line 8, ../../app/assets/stylesheets/scaffolds.css.scss */
 p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
@@ -23,7 +23,7 @@ pre {
 
 /* line 18, ../../app/assets/stylesheets/scaffolds.css.scss */
 a {
-  color: #000;
+  color: #999;
 }
 /* line 20, ../../app/assets/stylesheets/scaffolds.css.scss */
 a:visited {
@@ -31,7 +31,7 @@ a:visited {
 }
 /* line 22, ../../app/assets/stylesheets/scaffolds.css.scss */
 a:hover {
-  color: #fff;
+  color: #eee;
   background-color: #000;
 }
 

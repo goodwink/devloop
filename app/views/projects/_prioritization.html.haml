@@ -1,0 +1,7 @@
+.table-container
+  %ul.sortable#prioritization-sort
+    - @project.tasks.order_by([[:rank, :asc]]).each do |task|
+      %li.ui-state-default{id: "#{task.id}"}
+        %span.left-edge= link_to "##{task.number}", task
+        %span.main-content= task.name
+        %span.right-edge= task.estimate

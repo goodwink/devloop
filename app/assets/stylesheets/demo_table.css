@@ -219,11 +219,11 @@ table.datatable tr.even.gradeU {
 
 
 tr.odd {
-	background-color: #E2E4FF;
+	background-color: #444444;
 }
 
 tr.even {
-	background-color: white;
+	background-color: #222222;
 }
 
 
@@ -326,7 +326,7 @@ table.datatable tr.odd.row_selected td {
  */
 /* For the standard odd/even */
 tr.odd td.sorting_1 {
-	background-color: #D3D6FF;
+	background-color: rgba(255, 255, 255, 0.10);
 }
 
 tr.odd td.sorting_2 {

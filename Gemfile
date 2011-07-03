@@ -25,6 +25,8 @@ gem 'hoptoad_notifier'
 gem 'jquery-rails'
 gem 'sprockets', '2.0.0.beta.10'
 
+gem 'factory_girl'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

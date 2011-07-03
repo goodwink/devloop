@@ -8,29 +8,99 @@ ul.hmenu {
 /* line 7, ../../app/assets/stylesheets/application.css.scss */
 ul.hmenu li {
   display: inline;
+  color: #EEE;
+  font-weight: bold;
+  font-size: 14pt;
+  font-family: 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
 }
 
-/* line 11, ../../app/assets/stylesheets/application.css.scss */
+/* line 15, ../../app/assets/stylesheets/application.css.scss */
+ul.sortable {
+  list-style: none;
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 0px;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 0px;
+}
+
+/* line 24, ../../app/assets/stylesheets/application.css.scss */
 .table-container {
   width: 800px;
 }
 
-/* line 15, ../../app/assets/stylesheets/application.css.scss */
+/* line 28, ../../app/assets/stylesheets/application.css.scss */
+.dashboard-column {
+  width: 130px;
+  float: left;
+  margin-left: 5px;
+  border-right-width: 2px;
+  border-right-color: rgba(255, 255, 255, 0.5);
+  border-right-style: dotted;
+  min-height: 600px;
+}
+
+/* line 38, ../../app/assets/stylesheets/application.css.scss */
+.rightmost {
+  width: 260px;
+  border-right-width: 0px;
+  min-height: 600px;
+}
+
+/* line 44, ../../app/assets/stylesheets/application.css.scss */
+li.card {
+  margin: 3px 3px 3px 0;
+  padding: 1px;
+  width: 120px;
+  height: 100px;
+  font-size: 10pt;
+  text-align: center;
+}
+
+/* line 53, ../../app/assets/stylesheets/application.css.scss */
 .sortable .left-edge {
   text-align: left;
   margin-left: 5px;
   float: left;
 }
 
-/* line 21, ../../app/assets/stylesheets/application.css.scss */
+/* line 59, ../../app/assets/stylesheets/application.css.scss */
 .sortable .right-edge {
   text-align: right;
   margin-right: 5px;
   float: right;
 }
 
-/* line 27, ../../app/assets/stylesheets/application.css.scss */
+/* line 65, ../../app/assets/stylesheets/application.css.scss */
 .sortable .main-content {
   margin-left: 10px;
   margin-right: 10px;
+}
+
+/* line 70, ../../app/assets/stylesheets/application.css.scss */
+.sortable .card-content {
+  margin-left: 10px;
+  margin-right: 5px;
+}
+
+/* line 75, ../../app/assets/stylesheets/application.css.scss */
+.project-header {
+  margin-top: 15px;
+  margin-left: 10px;
+  width: 700px;
+}
+
+/* line 81, ../../app/assets/stylesheets/application.css.scss */
+.project-header td {
+  padding: 8px;
+  font-size: 12pt;
+  font-family: 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
+}
+
+/* line 87, ../../app/assets/stylesheets/application.css.scss */
+#tab-container {
+  margin-top: 25px;
+  margin-left: 10px;
+  width: 1000px;
+  min-height: 700px;
 }
