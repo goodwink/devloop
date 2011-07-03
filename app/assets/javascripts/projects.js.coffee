@@ -19,8 +19,7 @@ $(document).ready(
         })
     )
     $('.card').draggable({
-      revert: "invalid",
-      snap: true
+      revert: "invalid"
     })
     $('.droppable').droppable({
     			hoverClass: "ui-state-active",
@@ -29,4 +28,15 @@ $(document).ready(
 )
 
 drop = (droppable, dragable) ->
-  alert("Dragable id: #{dragable.attr('id')} went into Droppable id: #{droppable.attr('id')}")
+  dragable.remove()
+  dragable.removeClass('ui-draggable-dragging')
+  dragable.css({left: 0, top: 0})
+  droppable.append(dragable)
+  id = dragable.attr('id')
+  phase = droppable.attr('id')
+  $.ajax({
+    type: "PUT",
+    url: "/tasks/#{id}.json",
+    data: {task: {phase: phase}}
+  })
+  
