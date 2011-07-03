@@ -21,6 +21,16 @@ ul.sortable {
   -webkit-padding-start: 0px;
 }
 
+ul.droppable {
+  list-style: none;
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 0px;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 0px;
+  min-height: 600px;
+}
+
 .table-container {
   width: 800px;
 }
@@ -29,6 +39,7 @@ ul.sortable {
   width: 130px;
   float: left;
   margin-left: 5px;
+  margin-right: 5px;
   border-right-width: 2px;
   border-right-color: rgba(255, 255, 255, 0.50);
   border-right-style: dotted;
@@ -36,9 +47,8 @@ ul.sortable {
 }
 
 .rightmost {
-  width: 260px;
+  width: 240px;
   border-right-width: 0px;
-  min-height: 600px;
 }
 
 li.card {
@@ -88,5 +98,5 @@ li.card {
   margin-top: 25px;
   margin-left: 10px;
   width: 1000px;
-  min-height: 700px;
+  min-height: 740px;
 }

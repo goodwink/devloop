@@ -5,6 +5,7 @@
 $(document).ready(
   () ->
     $('#tab-container').tabs()
+    
     $('#prioritization-sort').sortable()
     $('#prioritization-sort').disableSelection()
     $('#prioritization-sort').bind('sortupdate',
@@ -16,5 +17,16 @@ $(document).ready(
           url: "/tasks/#{id}.json",
           data: {task: {rank: rank}}
         })
-    ) 
+    )
+    $('.card').draggable({
+      revert: "invalid",
+      snap: true
+    })
+    $('.droppable').droppable({
+    			hoverClass: "ui-state-active",
+    			drop: (event, ui) -> drop($(this), ui.draggable)
+    })
 )
+
+drop = (droppable, dragable) ->
+  alert("Dragable id: #{dragable.attr('id')} went into Droppable id: #{droppable.attr('id')}")
