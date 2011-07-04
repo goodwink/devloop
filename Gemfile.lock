@@ -1,10 +1,4 @@
 GIT
-  remote: /Users/kyle/dev/oauth-ruby
-  revision: 7d67d149d365c3a19b81cd9b10c9e749d2b07d13
-  specs:
-    oauth (0.4.5)
-
-GIT
   remote: git://github.com/rails/rails.git
   revision: cee27beb0c2d967f5a6a7442d0a505db714dbdaa
   ref: cee27beb0c2d967f5a6a
@@ -118,6 +112,12 @@ GIT
     haml (3.2.0.alpha.0)
 
 GIT
+  remote: https://github.com/oauth/oauth-ruby.git
+  revision: 32fdc4cc9f39efe7b34f99a71cab1ba683eb72c9
+  specs:
+    oauth (0.4.5)
+
+GIT
   remote: https://github.com/rails/sass-rails.git
   revision: 031236b31eaf20658226a9ae051749cc6647c33f
   branch: 3-1-stable
@@ -144,6 +144,7 @@ GEM
       execjs
     coffee-script-source (1.1.1)
     crack (0.1.8)
+    curb (0.7.15)
     database_cleaner (0.6.7)
     diff-lcs (1.1.2)
     erubis (2.7.0)
@@ -157,6 +158,13 @@ GEM
       addressable (~> 2.2.6)
       multipart-post (~> 1.1.0)
       rack (< 2, >= 1.1.0)
+    feedzirra (0.0.24)
+      activesupport (>= 2.3.8)
+      builder (>= 2.1.2)
+      curb (>= 0.2.3)
+      loofah (>= 0.3.1)
+      nokogiri (> 0.0.0)
+      sax-machine (>= 0.0.12)
     fssm (0.2.7)
     haml-rails (0.3.4)
       actionpack (~> 3.0)
@@ -175,6 +183,8 @@ GEM
       railties (~> 3.0)
       thor (~> 0.14)
     libv8 (3.3.10.2)
+    loofah (1.0.0)
+      nokogiri (>= 1.3.3)
     mail (2.3.0)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -233,6 +243,8 @@ GEM
       ruby-openid (>= 2.1.7)
     rubyntlm (0.1.1)
     sass (3.1.4)
+    sax-machine (0.0.16)
+      nokogiri (> 0.0.0)
     simple_form (1.4.2)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
@@ -272,6 +284,7 @@ DEPENDENCIES
   devise!
   factory_girl
   factory_girl_rails
+  feedzirra
   haml!
   haml-rails
   hoptoad_notifier

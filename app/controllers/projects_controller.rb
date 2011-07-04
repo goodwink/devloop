@@ -14,6 +14,12 @@ class ProjectsController < ApplicationController
   # GET /projects/1.json
   def show
     @project = Project.find(params[:id])
+    
+    #feed = Feedzirra::Feed.fetch_and_parse("#{@project.gitorious_repo}.atom")
+    
+    #if (feed)
+    #  @entries = feed.entries
+    #end
 
     respond_to do |format|
       format.html # show.html.erb

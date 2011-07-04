@@ -21,6 +21,7 @@ gem 'devise', :git => 'http://github.com/plataformatec/devise.git'
 gem 'twitter'
 gem 'oauth', :git => 'https://github.com/oauth/oauth-ruby.git'
 gem 'omniauth', :git => 'https://github.com/intridea/omniauth'
+gem 'feedzirra'
 
 gem 'hoptoad_notifier'
 
