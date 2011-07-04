@@ -15,6 +15,13 @@ class TasksController < ApplicationController
   def show
     @task = Task.find(params[:id])
 
+    Twitter.configure do |config|
+      config.consumer_key = "6505998e1514a6dfcce1a185cc2f80e7"
+      config.consumer_secret = "9599164edea0e25d61d62b83c30d89b5"
+      config.oauth_token = YOUR_OAUTH_TOKEN
+      config.oauth_token_secret = YOUR_OAUTH_TOKEN_SECRET
+    end
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @task }

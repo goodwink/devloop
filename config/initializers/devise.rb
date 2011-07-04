@@ -191,6 +191,14 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', :scope => 'user,public_repo'
+  
+  config.omniauth :identica, '6505998e1514a6dfcce1a185cc2f80e7', '9599164edea0e25d61d62b83c30d89b5',
+    {client_options: {authorize_url: "http://status.devscoop.com/api/oauth/authorize",
+                      token_url: "http://status.devscoop.com/api/oauth/access_token",
+                      authorize_path: "/api/oauth/authorize",
+                      access_token_path: "/api/oauth/access_token",
+                      request_token_path: "/api/oauth/request_token",
+                      site: "http://status.devscoop.com"}}
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

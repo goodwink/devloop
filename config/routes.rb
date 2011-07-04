@@ -7,7 +7,7 @@ Devloop::Application.routes.draw do
 
   resources :profiles
 
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
   resources :tasks
 
