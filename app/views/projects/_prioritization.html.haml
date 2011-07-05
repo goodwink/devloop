@@ -5,3 +5,15 @@
         %span.left-edge= link_to "##{task.number}", task
         %span.main-content= task.name
         %span.right-edge= task.estimate
+  #new-task
+    %a#new-task-link{href: "#", project:"#{@project.id}"} Create new task...
+  #new-task-card
+    %form
+      %fieldset
+        %legend New Task
+        %label{for: "name"} Name
+        %input#name{type: "text"}
+        %label{for: "description"} Description
+        %textarea#description
+        %label{for: "estimate"} Estimate
+        %input#estimate{type: "text"}

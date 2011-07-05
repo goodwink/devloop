@@ -25,7 +25,13 @@ $(document).ready(
     			hoverClass: "ui-state-active",
     			drop: (event, ui) -> drop($(this), ui.draggable)
     })
+    $('#new-task-link').bind 'click', (event) -> new_task_expand(event)
+    $('#new-task-card').hide()
 )
+
+new_task_expand = (event) ->
+  $('#new-task').hide()
+  $('#new-task-card').show('slide')
 
 drop = (droppable, dragable) ->
   dragable.remove()
