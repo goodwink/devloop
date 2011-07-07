@@ -24,35 +24,37 @@ pre {
 /* line 18, ../../app/assets/stylesheets/scaffolds.css.scss */
 a {
   color: #999;
+  text-decoration: none;
 }
-/* line 20, ../../app/assets/stylesheets/scaffolds.css.scss */
+/* line 21, ../../app/assets/stylesheets/scaffolds.css.scss */
 a:visited {
   color: #666;
 }
-/* line 22, ../../app/assets/stylesheets/scaffolds.css.scss */
+/* line 23, ../../app/assets/stylesheets/scaffolds.css.scss */
 a:hover {
   color: #eee;
   background-color: #000;
+  text-decoration: underline;
 }
 
-/* line 27, ../../app/assets/stylesheets/scaffolds.css.scss */
+/* line 29, ../../app/assets/stylesheets/scaffolds.css.scss */
 div.field, div.actions {
   margin-bottom: 10px;
 }
 
-/* line 30, ../../app/assets/stylesheets/scaffolds.css.scss */
+/* line 32, ../../app/assets/stylesheets/scaffolds.css.scss */
 #notice {
   color: green;
 }
 
-/* line 33, ../../app/assets/stylesheets/scaffolds.css.scss */
+/* line 35, ../../app/assets/stylesheets/scaffolds.css.scss */
 .field_with_errors {
   padding: 2px;
   background-color: red;
   display: table;
 }
 
-/* line 38, ../../app/assets/stylesheets/scaffolds.css.scss */
+/* line 40, ../../app/assets/stylesheets/scaffolds.css.scss */
 #error_explanation {
   width: 450px;
   border: 2px solid red;
@@ -61,7 +63,7 @@ div.field, div.actions {
   margin-bottom: 20px;
   background-color: #f0f0f0;
 }
-/* line 45, ../../app/assets/stylesheets/scaffolds.css.scss */
+/* line 47, ../../app/assets/stylesheets/scaffolds.css.scss */
 #error_explanation h2 {
   text-align: left;
   font-weight: bold;
@@ -72,7 +74,7 @@ div.field, div.actions {
   background-color: #c00;
   color: #fff;
 }
-/* line 54, ../../app/assets/stylesheets/scaffolds.css.scss */
+/* line 56, ../../app/assets/stylesheets/scaffolds.css.scss */
 #error_explanation ul li {
   font-size: 12px;
   list-style: square;

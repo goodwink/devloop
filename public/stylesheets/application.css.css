@@ -17,30 +17,24 @@ ul.hmenu li {
 /* line 15, ../../app/assets/stylesheets/application.css.scss */
 ul.sortable {
   list-style: none;
-  -webkit-margin-before: 0px;
-  -webkit-margin-after: 0px;
-  -webkit-margin-start: 0px;
-  -webkit-margin-end: 0px;
-  -webkit-padding-start: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
-/* line 24, ../../app/assets/stylesheets/application.css.scss */
+/* line 21, ../../app/assets/stylesheets/application.css.scss */
 ul.droppable {
   list-style: none;
-  -webkit-margin-before: 0px;
-  -webkit-margin-after: 0px;
-  -webkit-margin-start: 0px;
-  -webkit-margin-end: 0px;
-  -webkit-padding-start: 0px;
+  margin: 0px;
+  padding: 0px;
   min-height: 600px;
 }
 
-/* line 34, ../../app/assets/stylesheets/application.css.scss */
+/* line 28, ../../app/assets/stylesheets/application.css.scss */
 .table-container {
   width: 800px;
 }
 
-/* line 38, ../../app/assets/stylesheets/application.css.scss */
+/* line 32, ../../app/assets/stylesheets/application.css.scss */
 .dashboard-column {
   width: 12%;
   float: left;
@@ -52,63 +46,77 @@ ul.droppable {
   min-height: 600px;
 }
 
-/* line 49, ../../app/assets/stylesheets/application.css.scss */
+/* line 43, ../../app/assets/stylesheets/application.css.scss */
 .rightmost {
   width: 20%;
   border-right-width: 0px;
 }
 
-/* line 54, ../../app/assets/stylesheets/application.css.scss */
+/* line 48, ../../app/assets/stylesheets/application.css.scss */
 li.card {
   margin: 3px 3px 3px 0;
-  padding: 1px;
+  padding: 3px;
   width: 95%;
   height: 100px;
   font-size: 10pt;
   text-align: center;
 }
 
-/* line 63, ../../app/assets/stylesheets/application.css.scss */
+/* line 57, ../../app/assets/stylesheets/application.css.scss */
+h3.ui-widget-header {
+  margin: 0px;
+  padding: 2px;
+}
+
+/* line 62, ../../app/assets/stylesheets/application.css.scss */
+.card .bottom-right-corner {
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  right: 3px;
+}
+
+/* line 69, ../../app/assets/stylesheets/application.css.scss */
 .sortable .left-edge {
   text-align: left;
   margin-left: 5px;
   float: left;
 }
 
-/* line 69, ../../app/assets/stylesheets/application.css.scss */
+/* line 75, ../../app/assets/stylesheets/application.css.scss */
 .sortable .right-edge {
   text-align: right;
   margin-right: 5px;
   float: right;
 }
 
-/* line 75, ../../app/assets/stylesheets/application.css.scss */
+/* line 81, ../../app/assets/stylesheets/application.css.scss */
 .sortable .main-content {
   margin-left: 10px;
   margin-right: 10px;
 }
 
-/* line 80, ../../app/assets/stylesheets/application.css.scss */
+/* line 86, ../../app/assets/stylesheets/application.css.scss */
 .sortable .card-content {
   margin-left: 10px;
   margin-right: 5px;
 }
 
-/* line 85, ../../app/assets/stylesheets/application.css.scss */
+/* line 91, ../../app/assets/stylesheets/application.css.scss */
 .project-header {
   margin-top: 15px;
   margin-left: 10px;
   width: 700px;
 }
 
-/* line 91, ../../app/assets/stylesheets/application.css.scss */
+/* line 97, ../../app/assets/stylesheets/application.css.scss */
 .project-header td {
   padding: 8px;
   font-size: 12pt;
   font-family: 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
 }
 
-/* line 97, ../../app/assets/stylesheets/application.css.scss */
+/* line 103, ../../app/assets/stylesheets/application.css.scss */
 #tab-container {
   margin-top: 25px;
   margin-left: 10px;
