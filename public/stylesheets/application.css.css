@@ -42,7 +42,7 @@ ul.droppable {
 
 /* line 38, ../../app/assets/stylesheets/application.css.scss */
 .dashboard-column {
-  width: 130px;
+  width: 12%;
   float: left;
   margin-left: 5px;
   margin-right: 5px;
@@ -54,7 +54,7 @@ ul.droppable {
 
 /* line 49, ../../app/assets/stylesheets/application.css.scss */
 .rightmost {
-  width: 240px;
+  width: 20%;
   border-right-width: 0px;
 }
 
@@ -62,7 +62,7 @@ ul.droppable {
 li.card {
   margin: 3px 3px 3px 0;
   padding: 1px;
-  width: 120px;
+  width: 95%;
   height: 100px;
   font-size: 10pt;
   text-align: center;
@@ -112,6 +112,7 @@ li.card {
 #tab-container {
   margin-top: 25px;
   margin-left: 10px;
-  width: 1000px;
+  margin-right: 10px;
+  width: 95%;
   min-height: 740px;
 }

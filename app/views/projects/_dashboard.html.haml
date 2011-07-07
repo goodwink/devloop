@@ -2,9 +2,8 @@
   %h4 Story Queue
   %ul.droppable#queue
     - @project.tasks.any_in(phase: [nil, "queue"]).order_by([[:rank, :asc]]).limit(5).each do |task|
-      %li.ui-state-default.card{id: "#{task.id}"}
-        %span.left-edge= link_to "##{task.number}", task
-        %span.main-content= link_to task.name, task
+      %li.ui-widget-content.card{id: "#{task.id}"}
+        %h3.ui-widget-header= link_to "##{task.number} #{task.name}", task
 
 .dashboard-column
   %h4 Elaboration
