@@ -18,6 +18,35 @@ ul.sortable {
   padding: 0px;
 }
 
+.sortable li {
+  padding: 3px;
+  margin-bottom: 6px;
+}
+
+.ui-state-highlight {
+  height: 1.5em;
+  line-height: 1.2em;
+}
+
+.card .main-content {
+  margin-top: 1.5em;
+  height: 77%;
+}
+
+#name {
+  width: 85%;
+}
+
+#description {
+  margin-top: 0.5em;
+  width: 95%;
+  height: 77%;
+}
+
+#estimate {
+  width: 4em;
+}
+
 ul.droppable {
   list-style: none;
   margin: 0px;
@@ -54,6 +83,15 @@ li.card {
   text-align: center;
 }
 
+div.card {
+  margin: 3px 3px 3px 0;
+  padding: 3px;
+  width: 80%;
+  height: 300px;
+  font-size: 10pt;
+  text-align: center;
+}
+
 h3.ui-widget-header {
   margin: 0px;
   padding: 2px;
@@ -64,6 +102,10 @@ h3.ui-widget-header {
   position: absolute;
   bottom: 0;
   right: 3px;
+}
+
+#new-task-card .card .bottom-right-corner {
+  bottom: 3px;
 }
 
 .sortable .left-edge {

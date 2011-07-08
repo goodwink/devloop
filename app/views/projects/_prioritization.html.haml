@@ -1,7 +1,7 @@
 .table-container
   %ul.sortable#prioritization-sort
     - @project.tasks.order_by([[:rank, :asc]]).each do |task|
-      %li.ui-state-default{id: "#{task.id}"}
+      %li.ui-state-default.ui-corner-all{id: "#{task.id}"}
         %span.left-edge= link_to "##{task.number}", task
         %span.main-content= task.name
         %span.right-edge= task.estimate
@@ -9,11 +9,10 @@
     %a#new-task-link{href: "#", project:"#{@project.id}"} Create new task...
   #new-task-card
     %form
-      %fieldset
-        %legend New Task
-        %label{for: "name"} Name
-        %input#name{type: "text"}
-        %label{for: "description"} Description
-        %textarea#description
-        %label{for: "estimate"} Estimate
-        %input#estimate{type: "text"}
+      .ui-widget-content.card.ui-corner-all
+        %span.ui-widget-header.ui-corner-all
+          %input#name{type: "text"}
+        %span.main-content
+          %textarea#description
+        %span.bottom-right-corner
+          %input#estimate{type: "text"}

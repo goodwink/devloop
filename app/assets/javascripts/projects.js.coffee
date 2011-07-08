@@ -6,7 +6,9 @@ $(document).ready(
   () ->
     $('#tab-container').tabs()
     
-    $('#prioritization-sort').sortable()
+    $('#prioritization-sort').sortable({
+      placeholder: "ui-state-highlight ui-corner-all" 
+    })
     $('#prioritization-sort').disableSelection()
     $('#prioritization-sort').bind('sortupdate',
       (event, ui) ->

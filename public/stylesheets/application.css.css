@@ -22,6 +22,41 @@ ul.sortable {
 }
 
 /* line 21, ../../app/assets/stylesheets/application.css.scss */
+.sortable li {
+  padding: 3px;
+  margin-bottom: 6px;
+}
+
+/* line 26, ../../app/assets/stylesheets/application.css.scss */
+.ui-state-highlight {
+  height: 1.5em;
+  line-height: 1.2em;
+}
+
+/* line 31, ../../app/assets/stylesheets/application.css.scss */
+.card .main-content {
+  margin-top: 1.5em;
+  height: 77%;
+}
+
+/* line 36, ../../app/assets/stylesheets/application.css.scss */
+#name {
+  width: 85%;
+}
+
+/* line 40, ../../app/assets/stylesheets/application.css.scss */
+#description {
+  margin-top: 0.5em;
+  width: 95%;
+  height: 77%;
+}
+
+/* line 46, ../../app/assets/stylesheets/application.css.scss */
+#estimate {
+  width: 4em;
+}
+
+/* line 50, ../../app/assets/stylesheets/application.css.scss */
 ul.droppable {
   list-style: none;
   margin: 0px;
@@ -29,12 +64,12 @@ ul.droppable {
   min-height: 600px;
 }
 
-/* line 28, ../../app/assets/stylesheets/application.css.scss */
+/* line 57, ../../app/assets/stylesheets/application.css.scss */
 .table-container {
   width: 800px;
 }
 
-/* line 32, ../../app/assets/stylesheets/application.css.scss */
+/* line 61, ../../app/assets/stylesheets/application.css.scss */
 .dashboard-column {
   width: 12%;
   float: left;
@@ -46,13 +81,13 @@ ul.droppable {
   min-height: 600px;
 }
 
-/* line 43, ../../app/assets/stylesheets/application.css.scss */
+/* line 72, ../../app/assets/stylesheets/application.css.scss */
 .rightmost {
   width: 20%;
   border-right-width: 0px;
 }
 
-/* line 48, ../../app/assets/stylesheets/application.css.scss */
+/* line 77, ../../app/assets/stylesheets/application.css.scss */
 li.card {
   margin: 3px 3px 3px 0;
   padding: 3px;
@@ -62,13 +97,23 @@ li.card {
   text-align: center;
 }
 
-/* line 57, ../../app/assets/stylesheets/application.css.scss */
+/* line 86, ../../app/assets/stylesheets/application.css.scss */
+div.card {
+  margin: 3px 3px 3px 0;
+  padding: 3px;
+  width: 80%;
+  height: 300px;
+  font-size: 10pt;
+  text-align: center;
+}
+
+/* line 95, ../../app/assets/stylesheets/application.css.scss */
 h3.ui-widget-header {
   margin: 0px;
   padding: 2px;
 }
 
-/* line 62, ../../app/assets/stylesheets/application.css.scss */
+/* line 100, ../../app/assets/stylesheets/application.css.scss */
 .card .bottom-right-corner {
   text-align: right;
   position: absolute;
@@ -76,47 +121,52 @@ h3.ui-widget-header {
   right: 3px;
 }
 
-/* line 69, ../../app/assets/stylesheets/application.css.scss */
+/* line 107, ../../app/assets/stylesheets/application.css.scss */
+#new-task-card .card .bottom-right-corner {
+  bottom: 3px;
+}
+
+/* line 111, ../../app/assets/stylesheets/application.css.scss */
 .sortable .left-edge {
   text-align: left;
   margin-left: 5px;
   float: left;
 }
 
-/* line 75, ../../app/assets/stylesheets/application.css.scss */
+/* line 117, ../../app/assets/stylesheets/application.css.scss */
 .sortable .right-edge {
   text-align: right;
   margin-right: 5px;
   float: right;
 }
 
-/* line 81, ../../app/assets/stylesheets/application.css.scss */
+/* line 123, ../../app/assets/stylesheets/application.css.scss */
 .sortable .main-content {
   margin-left: 10px;
   margin-right: 10px;
 }
 
-/* line 86, ../../app/assets/stylesheets/application.css.scss */
+/* line 128, ../../app/assets/stylesheets/application.css.scss */
 .sortable .card-content {
   margin-left: 10px;
   margin-right: 5px;
 }
 
-/* line 91, ../../app/assets/stylesheets/application.css.scss */
+/* line 133, ../../app/assets/stylesheets/application.css.scss */
 .project-header {
   margin-top: 15px;
   margin-left: 10px;
   width: 700px;
 }
 
-/* line 97, ../../app/assets/stylesheets/application.css.scss */
+/* line 139, ../../app/assets/stylesheets/application.css.scss */
 .project-header td {
   padding: 8px;
   font-size: 12pt;
   font-family: 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
 }
 
-/* line 103, ../../app/assets/stylesheets/application.css.scss */
+/* line 145, ../../app/assets/stylesheets/application.css.scss */
 #tab-container {
   margin-top: 25px;
   margin-left: 10px;
