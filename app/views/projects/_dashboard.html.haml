@@ -11,7 +11,7 @@
   %h4 Elaboration
   %ul.droppable#elaboration
     - @project.tasks.where(phase: "elaboration").order_by([[:rank, :asc]]).limit(2).each do |task|
-      %li.ui-state-default.card{id: "#{task.id}"}
+      %li.ui-widget-content.card.ui-corner-all{id: "#{task.id}"}
         %h3.ui-widget-header.ui-corner-all= link_to "##{task.number} #{task.name}", task
         %p= task.description
         %span.bottom-right-corner= task.estimate
@@ -20,7 +20,7 @@
   %h4 Development
   %ul.droppable#development
     - @project.tasks.where(phase: "development").order_by([[:rank, :asc]]).limit(1).each do |task|
-      %li.ui-state-default.card{id: "#{task.id}"}
+      %li.ui-widget-content.card.ui-corner-all{id: "#{task.id}"}
         %h3.ui-widget-header.ui-corner-all= link_to "##{task.number} #{task.name}", task
         %p= task.description
         %span.bottom-right-corner= task.estimate
@@ -29,7 +29,7 @@
   %h4 Test
   %ul.droppable#test
     - @project.tasks.where(phase: "test").order_by([[:rank, :asc]]).limit(3).each do |task|
-      %li.ui-state-default.card{id: "#{task.id}"}
+      %li.ui-widget-content.card.ui-corner-all{id: "#{task.id}"}
         %h3.ui-widget-header.ui-corner-all= link_to "##{task.number} #{task.name}", task
         %p= task.description
         %span.bottom-right-corner= task.estimate
@@ -38,7 +38,7 @@
   %h4 Deployment
   %ul.droppable#deployment
     - @project.tasks.where(phase: "deployment").order_by([[:rank, :asc]]).limit(1).each do |task|
-      %li.ui-state-default.card{id: "#{task.id}"}
+      %li.ui-widget-content.card.ui-corner-all{id: "#{task.id}"}
         %h3.ui-widget-header.ui-corner-all= link_to "##{task.number} #{task.name}", task
         %p= task.description
         %span.bottom-right-corner= task.estimate
@@ -47,7 +47,7 @@
   %h4 Done!
   %ul.droppable#done
     - @project.tasks.where(phase: "done").order_by([[:rank, :asc]]).each do |task|
-      %li.ui-state-default.card{id: "#{task.id}"}
+      %li.ui-widget-content.card.ui-corner-all{id: "#{task.id}"}
         %h3.ui-widget-header.ui-corner-all= link_to "##{task.number} #{task.name}", task
         %p= task.description
         %span.bottom-right-corner= task.estimate

@@ -57,7 +57,15 @@ new_task_save = (event) ->
   new_task_contract(event)
 
 add_task_to_list = (data) ->
-  alert(data)
+  $('#prioritization-sort').append("
+    <li id='#{data._id}' class='ui-state-default ui-corner-all'>
+      <span class='left-edge'>
+        <a href='/tasks/#{data._id}'>##{data.number}</a>
+      </span>
+      <span class='main-content'>#{data.name}</span>
+      <span class='right-edge'>#{data.estimate}</span>
+    </li>
+  ")
 
 drop = (droppable, dragable) ->
   dragable.remove()
