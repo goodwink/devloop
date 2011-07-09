@@ -6,7 +6,7 @@
         %span.main-content= task.name
         %span.right-edge= task.estimate
   #new-task
-    %a#new-task-link{href: "#", project:"#{@project.id}"} Create new task...
+    %a#new-task-link{href: "#"} Create new task...
   #new-task-card
     %form
       .ui-widget-content.card.ui-corner-all
@@ -16,5 +16,6 @@
         %span.main-content
           %textarea#description{placeholder: "Enter description of the task here..."}
         %span.bottom-right-corner
+          %input#project{type: "hidden", value: @project.id}
           %button#cancel Cancel
           %button#save Save

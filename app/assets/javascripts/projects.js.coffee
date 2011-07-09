@@ -43,10 +43,10 @@ new_task_contract = (event) ->
   $('#new-task').show()
 
 new_task_save = (event) ->
-  name = $('#name').value
-  description = $('#description').value
-  estimate = $('#estimate').value
-  project = $('#new_task_link').attr('project')
+  name = $('#name').val()
+  description = $('#description').val()
+  estimate = $('#estimate').val()
+  project = $('#project').val()
   $.ajax({
     type: "POST",
     url: "/tasks.json",
