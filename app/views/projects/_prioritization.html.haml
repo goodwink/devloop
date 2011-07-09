@@ -11,8 +11,10 @@
     %form
       .ui-widget-content.card.ui-corner-all
         %span.ui-widget-header.ui-corner-all
-          %input#name{type: "text"}
+          %input#name{type: "text", placeholder: "Task name"}
+          %input#estimate{type: "text", placeholder: "Estimate"}
         %span.main-content
-          %textarea#description
+          %textarea#description{placeholder: "Enter description of the task here..."}
         %span.bottom-right-corner
-          %input#estimate{type: "text"}
+          %button#cancel Cancel
+          %button#save Save

@@ -30,21 +30,22 @@ ul.sortable {
 
 .card .main-content {
   margin-top: 1.5em;
-  height: 77%;
+  height: 76%;
 }
 
 #name {
-  width: 85%;
+  width: 80%;
 }
 
 #description {
   margin-top: 0.5em;
   width: 95%;
-  height: 77%;
+  height: 76%;
 }
 
 #estimate {
   width: 4em;
+  float: right;
 }
 
 ul.droppable {
