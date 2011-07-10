@@ -3,36 +3,44 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 $(document).ready(
-  () ->
-    $('#tab-container').tabs()
-    
-    $('#prioritization-sort').sortable({
-      placeholder: "ui-state-highlight ui-corner-all" 
-    })
-    $('#prioritization-sort').disableSelection()
-    $('#prioritization-sort').bind('sortupdate',
-      (event, ui) ->
-        id = ui.item.attr('id')
-        rank = ui.item.index()
-        $.ajax({
-          type: "PUT",
-          url: "/tasks/#{id}.json",
-          data: {task: {rank: rank}}
-        })
-    )
-    $('.card').draggable({
-      revert: "invalid"
-    })
-    $('.droppable').droppable({
-    			hoverClass: "ui-state-active",
-    			drop: (event, ui) -> drop($(this), ui.draggable)
-    })
-    $('#new-task-link').bind 'click', (event) -> new_task_expand(event)
-    $('#new-task-card').hide()
-    $('button', '.card').button()
-    $('#cancel').bind 'click', (event) -> new_task_contract(event)
-    $('#save').bind 'click', (event) -> new_task_save(event)
+  () -> $('#tab-container').tabs({
+    ajaxOptions: {cache: false, complete: (xhr, status) -> tab_ready(xhr) }
+  })
 )
+
+tab_ready = (xhr) ->
+  prioritization_tab_ready()
+  dashboard_tab_ready()
+
+prioritization_tab_ready = () ->
+  $('#prioritization-sort').sortable({
+    placeholder: "ui-state-highlight ui-corner-all" 
+  })
+  $('#prioritization-sort').disableSelection()
+  $('#prioritization-sort').bind('sortupdate',
+    (event, ui) ->
+      id = ui.item.attr('id')
+      rank = ui.item.index()
+      $.ajax({
+        type: "PUT",
+        url: "/tasks/#{id}.json",
+        data: {task: {rank: rank}}
+      })
+  )
+  $('#new-task-link').bind 'click', (event) -> new_task_expand(event)
+  $('#new-task-card').hide()
+  $('button', '.card').button()
+  $('#cancel').bind 'click', (event) -> new_task_contract(event)
+  $('#save').bind 'click', (event) -> new_task_save(event)
+
+dashboard_tab_ready = () ->
+  $('.card').draggable({
+    revert: "invalid"
+  })
+  $('.droppable').droppable({
+        hoverClass: "ui-state-active",
+        drop: (event, ui) -> drop($(this), ui.draggable)
+  })
 
 new_task_expand = (event) ->
   $('#new-task').hide()

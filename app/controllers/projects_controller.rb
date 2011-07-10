@@ -21,8 +21,15 @@ class ProjectsController < ApplicationController
     #  @entries = feed.entries
     #end
 
+    tab = params[:tab]
+
     respond_to do |format|
-      format.html # show.html.erb
+      if (!tab)
+        format.html
+      else
+        format.html { render(partial: tab) }
+      end
+
       format.json { render json: @project }
     end
   end

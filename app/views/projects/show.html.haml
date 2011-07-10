@@ -29,14 +29,11 @@
 #tab-container
   %ul
     %li
-      %a{href: "#prioritization"}
+      %a{href: project_path(@project, tab: "prioritization")}
         %span= "Prioritize Tasks"
     %li
-      %a{href: "#dashboard"}
+      %a{href: project_path(@project, tab: "dashboard")}
         %span= "Project Dashboard"
     %li
       %a{href: "#rolebased"}
         %span= "Role Focus"
-  #prioritization= render("prioritization")
-  #dashboard= render("dashboard")
-  #rolebased
